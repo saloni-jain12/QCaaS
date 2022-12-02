@@ -1,0 +1,10 @@
+# Create virtualenv
+python3 -m venv venv
+# activate virtualenv
+source venv/bin/activate
+
+
+
+python -m pip install --upgrade pip
+python -m pip install flask
+python -m pip install flask_expects_json 
