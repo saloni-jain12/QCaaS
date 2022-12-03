@@ -4,7 +4,7 @@
 
 This application is build and tested on 64 bit Windows 11 with 4GB RAM.
 
-Create and activate the virtual environment on Windows
+Create and activate the virtual environment on Windows PowerShell
 
 ```bash
 python -m venv venv
@@ -30,6 +30,37 @@ python -m pytest
 ```
 
 The server will be up on [http://localhost:5000](http://localhost:5000).
+
+
+## API Endpoints
+
+Client sends POST request with job and mode to application and receives Job ID in response
+
+```bash
+curl -i -X POST -H "Content-Type:application/json" -d "{\"job\": \"Y(89), X(90)\",\"mode\": \"echo\"}" http://localhost:5000/job
+```
+
+Expected Output:
+{
+    "jobID": "105528800897761760691894769894988597352"
+}
+
+
+Client send GET request with Job ID to get details about the job
+
+```bash
+curl --location --request GET "http://localhost:5000/job?id=105528800897761760691894769894988597352" 
+```
+
+Expected Output:
+{
+    "exit_code": 0,
+    "id": "105528800897761760691894769894988597352",
+    "mode": "echo",
+    "status": "Success",
+    "time_taken": "3.004326 secs",
+    "value": "Y(89), X(90)"
+}
 
 ## Requirements
 
