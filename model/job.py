@@ -1,11 +1,11 @@
 class Job:
     def __init__(self, id, value, mode, status='In-Progress', exit_code=-1, time_diff='NA'):
-         self._id = id
-         self._value = value
-         self._mode = mode
-         self._status = status
-         self._exit_code = exit_code
-         self._time_diff = time_diff
+        self._id = id
+        self._value = value
+        self._mode = mode
+        self._status = status
+        self._exit_code = exit_code
+        self._time_diff = time_diff
 
     # setter method for status
     def set_status(self, status):
@@ -31,5 +31,6 @@ class Job:
         }
         return job_details
 
+
 # Dictionary for jobs
-jobs = {}
+jobs: dict = {}
