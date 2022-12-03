@@ -40,19 +40,24 @@ Client sends POST request with job and mode to application and receives Job ID i
 curl -i -X POST -H "Content-Type:application/json" -d "{\"job\": \"Y(89), X(90)\",\"mode\": \"echo\"}" http://localhost:5000/job
 ```
 
-Expected Output:
+Expected Output: Applications sends back Job ID in response
+
+```bash
 {
     "jobID": "105528800897761760691894769894988597352"
 }
+```
 
 
-Client send GET request with Job ID to get details about the job
+Client sends GET request with Job ID to get details about the job
 
 ```bash
 curl --location --request GET "http://localhost:5000/job?id=105528800897761760691894769894988597352" 
 ```
 
-Expected Output:
+Expected Output: Returns details about the Job from the application
+
+```bash
 {
     "exit_code": 0,
     "id": "105528800897761760691894769894988597352",
@@ -61,6 +66,7 @@ Expected Output:
     "time_taken": "3.004326 secs",
     "value": "Y(89), X(90)"
 }
+```
 
 ## Requirements
 
