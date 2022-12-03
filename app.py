@@ -74,7 +74,7 @@ def execute_job():
 
     def execute_runtime(job):
         try:
-            print('*****In Runtime Thread******')
+            # print('*****In Runtime Thread******')
             mode = str(job.get_job_details()['mode'])
             value = str(job.get_job_details()['value'])
 
