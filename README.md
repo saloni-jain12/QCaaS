@@ -31,7 +31,6 @@ python -m pytest
 
 The server will be up on [http://localhost:5000](http://localhost:5000).
 
-
 ## API Endpoints
 
 Client sends POST request with job and mode to application and receives Job ID in response
