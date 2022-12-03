@@ -1,0 +1,4 @@
+flask
+flask_expects_json 
+pytest
+coverage
